@@ -13,8 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Dùng gemini-1.5-flash vì gemini-2.0-flash chưa tồn tại. Thay đổi nếu model 2.0 có thật sau này
         const API_ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
 
-        const prompt = `Với vai trò là một nhà thơ tài năng và đầy cảm xúc, hãy sáng tác một lời chúc mừng ngày 8/3 đặc biệt dành cho ${name} bằng tiếng Việt. 
+        const prompt = `Với vai trò là một chàng trai vui tính, hãy sáng tác một lời chúc mừng ngày 8/3 đặc biệt dành cho ${name} bằng tiếng Việt. 
         Lời chúc cần:
+        - Nếu nhận ra là cô gái hãy chúc nhiệt tình , còn tên là nam thì bảo "chắc bạn cô đơn lắm hả thôi nào nhập tên chị em vào đi ngày của họ mà, tôi nhận ra anh em mà !"
         - Có sự hài hước dí dỏm
         - Thể hiện sự trân trọng với vai trò của người phụ nữ trong gia đình và xã hội
         - Có chất miền Tây gần gũi
