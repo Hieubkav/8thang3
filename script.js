@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         - Có chất miền Tây gần gũi
         - Mang tính sáng tạo và độc đáo, tránh những câu chúc sáo rỗng thông thường
         - Dài khoảng 4-5 câu ngắn gọn nhưng ý nghĩa
+        - Không nói cái kiểu nghe cái tên là biết "con gái miền Tây" rồi! dở lắm . 
         Không cần thêm các từ mở đầu như "Thân gửi" hay "Chúc mừng".Không nói kiểu tên là con gái nè hoặc đại loại vậy`;
 
         try {
