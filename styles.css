@@ -1,0 +1,103 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes backgroundShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.greeting-appear {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.greeting-appear.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Card backgrounds */
+.card-background {
+    position: relative;
+    background-size: 400% 400%;
+    animation: backgroundShift 15s ease infinite;
+}
+
+.card-background::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.card-content {
+    z-index: 2;
+}
+
+.bg-style-1 {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+}
+
+.bg-style-2 {
+    background: linear-gradient(-45deg, #FF69B4, #DA70D6, #9370DB, #8A2BE2);
+}
+
+.bg-style-3 {
+    background: linear-gradient(-45deg, #FFB6C1, #FFC0CB, #FF69B4, #FF1493);
+}
+
+.bg-style-4 {
+    background: linear-gradient(-45deg, #FF8C00, #FF69B4, #FF1493, #C71585);
+}
+
+.bg-style-5 {
+    background: linear-gradient(-45deg, #8B008B, #4B0082, #800080, #9400D3);
+}
+
+/* Neumorphism styles */
+.neu-input {
+    transition: all 0.3s ease;
+}
+
+.neu-input:focus {
+    box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #ffffff;
+}
+
+.neu-button:active {
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
+    transform: translateY(2px);
+}
+
+/* Typography styles for card */
+.card-content h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-content p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}

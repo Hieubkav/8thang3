@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Chúc Mừng 8/3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@google/generative-ai"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    boxShadow: {
+                        'neu-light': '8px 8px 15px #a3b1c6, -8px -8px 15px #ffffff',
+                        'neu-pressed': 'inset 8px 8px 15px #a3b1c6, inset -8px -8px 15px #ffffff'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#e0e5ec] min-h-screen flex items-center justify-center p-4">
+    <main class="max-w-lg w-full">
+        <form id="greetingForm" class="bg-[#e0e5ec] p-8 rounded-2xl shadow-neu-light">
+            <h1 class="text-3xl font-bold text-pink-600 text-center mb-8 animate-fadeIn">
+                Thiệp Chúc Mừng Ngày 8/3
+            </h1>
+            <div class="space-y-6">
+                <div class="relative">
+                    <input type="text" 
+                           id="name" 
+                           required
+                           class="w-full bg-[#e0e5ec] px-4 py-3 rounded-lg outline-none shadow-neu-light focus:shadow-neu-pressed transition-shadow duration-300"
+                           placeholder="Nhập tên người bạn muốn gửi lời chúc">
+                </div>
+                <button type="submit" 
+                        class="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-lg shadow-neu-light hover:shadow-neu-pressed transition-all duration-300 transform hover:scale-[0.98]">
+                    Tạo Lời Chúc
+                </button>
+            </div>
+        </form>
+
+        <div id="greetingCard" class="mt-8 hidden">
+            <div id="cardContent" class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden card-background">
+                <div class="absolute inset-0 flex flex-col items-center justify-center p-8 text-center card-content">
+                    <h2 id="recipientName" class="text-3xl font-bold text-white mb-6 drop-shadow-lg"></h2>
+                    <p id="greetingMessage" class="text-xl text-white leading-relaxed font-medium drop-shadow-lg"></p>
+                </div>
+            </div>
+            <div class="mt-4 flex justify-center">
+                <button id="downloadBtn" 
+                        class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-lg shadow-neu-light hover:shadow-neu-pressed transition-all duration-300 transform hover:scale-[0.98] flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                    Tải Thiệp
+                </button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
